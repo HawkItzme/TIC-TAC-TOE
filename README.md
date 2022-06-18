@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/94545831/169682812-65b02c76-7064-41ba-8326-d70eacc78013.png)
 
-## Project by : Me & [Nishkarsh Saxena](https://github.com/nishkarsh800)
+
 - A two-player game where players one and two have to fill the grids of 3*3 with X and 0 respectively.
 - The winner would be declared when all the grids are filled.
 - The project operates in offline mode and the player can play as Multiplayer.
