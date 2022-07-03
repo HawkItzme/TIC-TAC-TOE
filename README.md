@@ -15,17 +15,24 @@
 -  Thus, we don't need to keep track of an entire n^2 board. We only need to keep a count for each row and column. 
 -  If at any time, a row or column matches the size of the board then that player has won.
 
-# Constraints
+## Constraints
 - 1 <= moves.length <= 9.
 - moves[i].length == 2.
 - 0 <= moves[i][j] <= 2.
 - Here, are no repeated elements on moves.
 
+## Project Demo
 
-# CONTRIBUTING GUIDELINES
+
+https://user-images.githubusercontent.com/94545831/177042451-500fa28a-ef37-4a5e-b181-4ccaa7bcc97d.mp4
+
+
+<br>
+
+# CONTRIBUTING GUIDELINES 😄
 If you think that you can add a new feature or want to fix a bug, we invite you to contribute to TIC TAC TOE and make this project better. To start contributing, follow the below instructions:
 
-1. Create a folder at your desire location (usually at your desktop).
+1. Create a folder at your desired location at your desktop.
 
 2. Open Git Bash Here
 
