@@ -18,6 +18,9 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
     }
+    //Making a variable count which keep track of number of times players have clicked, and if it is equal to 9 & there's no winner then it will
+    //Display Game Tied Dialog.
+    var count = 0
 
     // function for 9 blocks
     fun buclick(view: View) {
@@ -45,6 +48,7 @@ class GameActivity : AppCompatActivity() {
     var player2 = ArrayList<Int>()
 
     fun playGame(cellId: Int, buSelected: Button) {
+        count++
         if (activePlayer == 1) {
             buSelected.text = "X";
             buSelected.setBackgroundResource(R.drawable.playeronebox)
@@ -169,6 +173,27 @@ class GameActivity : AppCompatActivity() {
             // go to resources->layout->winner dialog & implement that layout here
             dialog.setContentView(R.layout.winnerdialog)
             dialog.win.text = "Player 2 Wins"
+
+            dialog.exit.setOnClickListener {
+                val intent = Intent(this, StartActivity::class.java)
+                startActivity(intent)
+            }
+
+            dialog.again.setOnClickListener {
+                val intent = Intent(this, GameActivity::class.java)
+                finish()
+                startActivity(intent)
+            }
+            dialog.show()
+
+        }
+        else if (count == 9) {
+            val dialog = Dialog(this)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.setCancelable(false)
+            // go to resources->layout->winner dialog & implement that layout here
+            dialog.setContentView(R.layout.winnerdialog)
+            dialog.win.text = "Game Tied"
 
             dialog.exit.setOnClickListener {
                 val intent = Intent(this, StartActivity::class.java)
