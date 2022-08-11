@@ -24,7 +24,6 @@
 ## Project Demo
 
 
-https://user-images.githubusercontent.com/94545831/177042451-500fa28a-ef37-4a5e-b181-4ccaa7bcc97d.mp4
 
 
 <br>
@@ -37,3 +36,16 @@ https://user-images.githubusercontent.com/94545831/177042451-500fa28a-ef37-4a5e-
 | | |
 |---|---|
 |<img width = 100 src = "https://user-images.githubusercontent.com/94545831/178086715-dd29081c-f577-4bb6-a7c6-493d0f09b4a6.png"/> | **Hackclub RAIT**|
+
+<br>
+
+## 🤠 **Our valuable Contributors**
+
+<a href="https://github.com/utkarsh006/LeetCode-Grind/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=utkarsh006/TIC-TAC-TOE" />
+</a>
+
+<div align="center">
+
+### Show some ❤️ by starring this awesome repository!
+</div>
