@@ -1,4 +1,9 @@
 # CONTRIBUTING GUIDELINES 😄
+
+- Star the REPO 😎
+- Attach Screenshots of the changes you made , in your PR.
+<br>
+
 If you think that you can add a new feature or want to fix a bug, we invite you to contribute to TIC TAC TOE and make this project better. To start contributing, follow the below instructions:
 
 1. Create a folder at your desired location at your desktop.
