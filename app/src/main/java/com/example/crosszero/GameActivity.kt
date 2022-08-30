@@ -3,6 +3,7 @@ package com.example.crosszero
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color.green
+import android.media.MediaPlayer
 import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,6 +25,9 @@ class GameActivity : AppCompatActivity() {
 
     // function for 9 blocks
     fun buclick(view: View) {
+        val mp: MediaPlayer = MediaPlayer.create(this,R.raw.boxmusic)
+        mp.start()
+
         var cellId = 0    // giving id's to each cell
         val buSelected = view as Button
 
@@ -147,6 +151,8 @@ class GameActivity : AppCompatActivity() {
 
         // making dialog
         if (winner == 1) {
+            val mp: MediaPlayer = MediaPlayer.create(this,R.raw.winner)
+            mp.start()
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
@@ -157,16 +163,20 @@ class GameActivity : AppCompatActivity() {
             dialog.exit.setOnClickListener {
                 val intent = Intent(this, StartActivity::class.java)
                 startActivity(intent)
+                mp.stop()
             }
 
             dialog.again.setOnClickListener {
                 val intent = Intent(this, GameActivity::class.java)
                 finish()
                 startActivity(intent)
+                mp.stop()
             }
             dialog.show()
         }
         else if (winner == 2) {
+            val mp: MediaPlayer = MediaPlayer.create(this,R.raw.winner2)
+            mp.start()
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
@@ -177,17 +187,21 @@ class GameActivity : AppCompatActivity() {
             dialog.exit.setOnClickListener {
                 val intent = Intent(this, StartActivity::class.java)
                 startActivity(intent)
+                mp.stop()
             }
 
             dialog.again.setOnClickListener {
                 val intent = Intent(this, GameActivity::class.java)
                 finish()
                 startActivity(intent)
+                mp.stop()
             }
             dialog.show()
 
         }
         else if (count == 9) {
+            val mp: MediaPlayer = MediaPlayer.create(this,R.raw.gametied)
+            mp.start()
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
@@ -198,12 +212,14 @@ class GameActivity : AppCompatActivity() {
             dialog.exit.setOnClickListener {
                 val intent = Intent(this, StartActivity::class.java)
                 startActivity(intent)
+                mp.stop()
             }
 
             dialog.again.setOnClickListener {
                 val intent = Intent(this, GameActivity::class.java)
                 finish()
                 startActivity(intent)
+                mp.stop()
             }
             dialog.show()
 
